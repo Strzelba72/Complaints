@@ -38,7 +38,7 @@ public class Main {
 
         System.out.println("Complaint: " + newcomplaint);
         String complaintss = client.target("http://localhost:8080/Server-1.0-SNAPSHOT/" +
-                        "api/complaints")
+                        "api/complaints?status=open")
                 .request(MediaType.APPLICATION_JSON)
                 .get(String.class);
 
